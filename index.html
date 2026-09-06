@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS GAMING</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+
+<header>
+    <nav>
+        <div class="logo">
+            NEXUS<span>GAMING</span>
+        </div>
+
+        <ul id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#tournament">Tournament</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button onclick="openLogin()">LOGIN</button>
+
+            <button onclick="openCart()">
+                🛒 <span id="cartCount">0</span>
+            </button>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+</header>
+
+
+<!-- ===== HOME ===== -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">WELCOME TO THE FUTURE</p>
+
+        <h1>
+            LEVEL UP<br>
+            <span>YOUR GAME</span>
+        </h1>
+
+        <p>
+            Premium gaming PCs, accessories,
+            esports tournaments and everything
+            a true gamer needs.
+        </p>
+
+        <a href="#products" class="main-btn">
+            EXPLORE STORE
+        </a>
+
+        <a href="#tournament" class="second-btn">
+            JOIN TOURNAMENT
+        </a>
+
+    </div>
+
+    <div class="hero-circle">
+        🎮
+    </div>
+
+</section>
+
+
+<!-- ===== FEATURES ===== -->
+
+<section class="features">
+
+    <div>
+        <span>⚡</span>
+        <h3>FAST PERFORMANCE</h3>
+        <p>Powerful gaming hardware.</p>
+    </div>
+
+    <div>
+        <span>🎯</span>
+        <h3>PRECISION</h3>
+        <p>Gaming accessories for pros.</p>
+    </div>
+
+    <div>
+        <span>🏆</span>
+        <h3>ESPORTS</h3>
+        <p>Compete and win prizes.</p>
+    </div>
+
+</section>
+
+
+<!-- ===== PRODUCTS ===== -->
+
+<section id="products">
+
+    <div class="section-heading">
+
+        <p>OUR STORE</p>
+
+        <h2>GAMING PRODUCTS</h2>
+
+    </div>
+
+
+    <!-- Search -->
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="🔎 Search products..."
+            onkeyup="searchProducts()"
+        >
+
+        <select id="category" onchange="filterProducts()">
+
+            <option value="all">All Categories</option>
+
+            <option value="pc">Gaming PC</option>
+
+            <option value="keyboard">Keyboard</option>
+
+            <option value="mouse">Mouse</option>
+
+            <option value="headset">Headset</option>
+
+        </select>
+
+    </div>
+
+
+    <div class="products" id="productList">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product"
+             data-name="gaming pc"
+             data-category="pc"
+             data-price="75999">
+
+            <div class="product-image">
+
+                <img src="images/gamingpc.jpg">
+
+                <span>HOT</span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Gaming PC Pro</h3>
+
+                <p>RTX Gaming Performance</p>
+
+                <h4>₹75,999</h4>
+
+                <button onclick="addCart(
+                    'Gaming PC Pro',
+                    75999
+                )">
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product"
+             data-name="gaming keyboard"
+             data-category="keyboard"
+             data-price="2499">
+
+            <div class="product-image">
+
+                <img src="images/keyboard.jpg">
+
+                <span>NEW</span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>RGB Keyboard</h3>
+
+                <p>Mechanical Gaming Keyboard</p>
+
+                <h4>₹2,499</h4>
+
+                <button onclick="addCart(
+                    'RGB Keyboard',
+                    2499
+                )">
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product"
+             data-name="gaming mouse"
+             data-category="mouse"
+             data-price="1299">
+
+            <div class="product-image">
+
+                <img src="images/mouse.jpg">
+
+                <span>PRO</span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>RGB Gaming Mouse</h3>
+
+                <p>High Precision Sensor</p>
+
+                <h4>₹1,299</h4>
+
+                <button onclick="addCart(
+                    'RGB Gaming Mouse',
+                    1299
+                )">
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product"
+             data-name="gaming headset"
+             data-category="headset"
+             data-price="1999">
+
+            <div class="product-image">
+
+                <img src="images/headset.jpg">
+
+                <span>BEST</span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Gaming Headset</h3>
+
+                <p>7.1 Surround Sound</p>
+
+                <h4>₹1,999</h4>
+
+                <button onclick="addCart(
+                    'Gaming Headset',
+                    1999
+                )">
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== TOURNAMENT ===== -->
+
+<section id="tournament" class="tournament">
+
+    <div>
+
+        <p>READY TO COMPETE?</p>
+
+        <h2>ULTIMATE GAMING<br>TOURNAMENT</h2>
+
+        <p>
+            Entry Fee: ₹199
+            <br>
+            Prize Pool: ₹50,000
+        </p>
+
+        <button onclick="registerTournament()">
+            REGISTER NOW
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ===== GALLERY ===== -->
+
+<section id="gallery">
+
+    <div class="section-heading">
+
+        <p>OUR GAMING WORLD</p>
+
+        <h2>GALLERY</h2>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <img src="images/gamingpc2.jpg">
+
+        <img src="images/keyboard2.jpg">
+
+        <img src="images/mouse2.jpg">
+
+        <img src="images/headset2.jpg">
+
+    </div>
+
+
+    <!-- Upload Image -->
+
+    <div class="upload">
+
+        <h3>📸 Add Your Gaming Photo</h3>
+
+        <input
+            type="file"
+            id="imageUpload"
+            accept="image/*"
+            onchange="uploadImage(event)"
+        >
+
+        <div id="uploadedGallery"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== ABOUT ===== -->
+
+<section class="about">
+
+    <div>
+
+        <p>WHO WE ARE</p>
+
+        <h2>BUILT FOR<br><span>GAMERS</span></h2>
+
+        <p>
+            NEXUS GAMING is a modern gaming store
+            created for gamers, streamers and esports
+            players.
+        </p>
+
+        <p>
+            We provide gaming PCs, keyboards,
+            mice, headsets and tournament experiences.
+        </p>
+
+    </div>
+
+    <div class="about-card">
+
+        <div>🎮</div>
+
+        <h3>NEXUS GAMING</h3>
+
+        <p>
+            Play. Compete. Win.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===== CONTACT ===== -->
+
+<section id="contact">
+
+    <div class="section-heading">
+
+        <p>GET IN TOUCH</p>
+
+        <h2>CONTACT US</h2>
+
+    </div>
+
+
+    <form id="contactForm">
+
+        <input
+            type="text"
+            placeholder="Your Name"
+            required
+        >
+
+        <input
+            type="email"
+            placeholder="Email Address"
+            required
+        >
+
+        <input
+            type="tel"
+            placeholder="Mobile Number"
+            required
+        >
+
+        <textarea
+            placeholder="Your Message"
+            required
+        ></textarea>
+
+        <button type="submit">
+            SEND MESSAGE 🚀
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+    <div class="logo">
+        NEXUS<span>GAMING</span>
+    </div>
+
+    <p>
+        © 2026 NEXUS GAMING
+    </p>
+
+    <div>
+        <a href="https://www.instagram.com/kumaraanuja17/"target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/@kgaming220"target="_blank">YouTube</a>
+        <a href="https://discord.gg/anuj_kumar_123"target="_blank">Discord</a>
+    </div>
+
+</footer>
+
+
+<!-- ===== LOGIN POPUP ===== -->
+
+<div class="popup" id="loginPopup">
+
+    <div class="popup-box">
+
+        <button
+            class="close"
+            onclick="closeLogin()">
+            ✕
+        </button>
+
+        <h2>LOGIN</h2>
+
+        <input
+            type="email"
+            placeholder="Email"
+            id="loginEmail"
+        >
+
+        <input
+            type="password"
+            placeholder="Password"
+            id="loginPassword"
+        >
+
+        <button onclick="login()">
+            LOGIN
+        </button>
+
+        <p>
+            Don't have an account?
+            <b onclick="signup()">
+                Sign Up
+            </b>
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ===== CART POPUP ===== -->
+
+<div class="popup" id="cartPopup">
+
+    <div class="popup-box cart-box">
+
+        <button
+            class="close"
+            onclick="closeCart()">
+            ✕
+        </button>
+
+        <h2>YOUR CART 🛒</h2>
+
+        <div id="cartItems"></div>
+
+        <h3>
+            Total:
+            ₹<span id="cartTotal">0</span>
+        </h3>
+
+        <button onclick="whatsappOrder()">
+            ORDER ON WHATSAPP 📲
+        </button>
+
+        <button
+            class="clear"
+            onclick="clearCart()">
+            CLEAR CART
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
