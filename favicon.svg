@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff006e"/>
+      <stop offset="50%" stop-color="#7b2cff"/>
+      <stop offset="100%" stop-color="#00eaff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100" height="100" rx="22" fill="#070711"/>
+
+  <!-- Neon border -->
+  <rect x="5" y="5" width="90" height="90" rx="20"
+        fill="none" stroke="url(#neon)" stroke-width="5"/>
+
+  <!-- Gaming controller -->
+  <path d="M25 57
+           C27 43 37 38 50 42
+           C63 38 73 43 75 57
+           C77 69 68 75 62 65
+           L58 59
+           L42 59
+           L38 65
+           C32 75 23 69 25 57Z"
+        fill="url(#neon)"
+        stroke="white"
+        stroke-width="3"/>
+
+  <!-- A letter -->
+  <path d="M39 56 L50 27 L61 56
+           M43 48 L57 48"
+        fill="none"
+        stroke="white"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Controller buttons -->
+  <circle cx="63" cy="51" r="3" fill="white"/>
+  <circle cx="69" cy="57" r="3" fill="white"/>
+</svg>
