@@ -200,14 +200,10 @@ function whatsappOrder() {
         total;
 
 
-    /*
-       IMPORTANT:
-       Replace 919999999999 with
-       your real WhatsApp number.
-    */
+    
 
     window.open(
-        "https://wa.me/919724102573?text=" +
+        "https://wa.me/919724103573?text=" +
         message,
         "_blank"
     );
